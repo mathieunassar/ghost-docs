@@ -1,0 +1,10 @@
+{
+  "name": "ghost-docs",
+  "version": "1.0.0",
+  "description": "Ghost MarkDown documentation",
+  "main": "index.js",
+  "repository": "https://github.com/mathieunassar/ghost-docs.git",
+  "author": "MathieuNassar <mathieu.nassar@gmail.com>",
+  "license": "Apache 2.0",
+  "private": false
+}
