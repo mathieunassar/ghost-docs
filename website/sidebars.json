@@ -1,10 +1,10 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+    "Getting Started": ["setup", "installation"],
+    "Library Guides": ["module", "persistence", "connection"],
+    "Extensions": ["connection_grpc"]
   },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+  "tuorials": {
+    "Tutorials": ["tutorial_helloworld", "tutorial_robot"]
   }
 }

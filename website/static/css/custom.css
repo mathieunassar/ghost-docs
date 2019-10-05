@@ -14,3 +14,19 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+.homeContainer
+{
+	background-color: #20232a;
+}
+
+.projectTitle
+{
+	color: #FFFFFF;
+}
+
+.pluginRowBlock .button
+{
+	border: 1.5px solid #5B1818;
+	color: #FFFFFF;
+}

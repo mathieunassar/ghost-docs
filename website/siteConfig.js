@@ -11,18 +11,18 @@
 // List of projects/orgs using your project for the users page.
 const users = [
   {
-    caption: 'User1',
+    caption: 'Me!',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/image.jpg'.
-    image: '/img/undraw_open_source.svg',
-    infoLink: 'https://www.facebook.com',
+    image: '/ghost-docs/img/mathieu.jpg',
+    infoLink: 'https://github.com/mathieunassar',
     pinned: true,
   },
 ];
 
 const siteConfig = {
-  title: 'ghost-docs', // Title for your website.
-  tagline: 'Documentation for ghost projects',
+  title: 'GhostDocs', // Title for your website.
+  tagline: 'Documentation Website for Ghost Projects',
   url: 'https://mathieunassar.github.io', // Your website URL
   baseUrl: '/ghost-docs/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -38,8 +38,8 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
-    {doc: 'doc4', label: 'API'},
+    {doc: 'setup', label: 'Docs'},
+    {doc: 'tutorial_helloworld', label: 'Tutorials'},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
   ],
@@ -48,16 +48,16 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/favicon.ico',
-  footerIcon: 'img/favicon.ico',
+  headerIcon: 'img/ghost.svg',
+  footerIcon: 'img/ghost.svg',
   favicon: 'img/favicon.ico',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#4059a8',
-    secondaryColor: '#2c3e75',
+    primaryColor: '#5B1818',//'#4059a8',
+    secondaryColor: '#561212',//'#2c3e75',
   },
-
+  
   /* Custom fonts for website */
   /*
   fonts: {
@@ -73,7 +73,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} Mathieu Nassar`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
