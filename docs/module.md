@@ -16,8 +16,6 @@ The following diagram represents the API interface ghost::Module surrounded by t
 
 ![Diagram: ghostmodule and Extensions](assets/ghostmodule.png)
 
-![](https://mathieunassar.github.io/ghost-docs/img/ghostmodule.png)
-
 ### Built-in components
 
 ghost::Module exposes several components that every microservices generally use:
