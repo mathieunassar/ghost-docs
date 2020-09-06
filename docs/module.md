@@ -14,6 +14,8 @@ ghostmodule is organized around the central class ghost::Module, whose responsib
 
 The following diagram represents the API interface ghost::Module surrounded by the components that it exposes.
 
+![Diagram: ghostmodule and Extensions](assets/ghostmodule.png)
+
 ![](https://mathieunassar.github.io/ghost-docs/img/ghostmodule.png)
 
 ### Built-in components
