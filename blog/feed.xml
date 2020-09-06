@@ -5,14 +5,14 @@
         <link>https://mathieunassar.github.io/ghost-docs/blog</link>
         <description>The best place to stay up-to-date with the latest GhostDocs news and events.</description>
         <lastBuildDate>Sat, 05 Oct 2019 06:00:00 GMT</lastBuildDate>
-        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-        <generator>Feed for Node.js</generator>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
         <image>
             <title>GhostDocs Blog</title>
             <url>https://mathieunassar.github.io/ghost-docs/img/ghost.svg</url>
             <link>https://mathieunassar.github.io/ghost-docs/blog</link>
         </image>
-        <copyright>Copyright © 2019 Mathieu Nassar</copyright>
+        <copyright>Copyright © 2020 Mathieu Nassar</copyright>
         <item>
             <title><![CDATA[New Version 1.0.0]]></title>
             <link>https://mathieunassar.github.io/ghost-docs/blog/2019/10/05/docs-website-online.html</link>
