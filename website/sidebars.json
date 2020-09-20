@@ -1,10 +1,10 @@
 {
-  "docs": {
+  "Guides": {
     "Getting Started": ["setup", "installation"],
-    "Library Guides": ["module", "persistence", "connection"],
-    "Extensions": ["connection_grpc"]
+    "Library Guides": ["module", "module_observability", "persistence", "connection"],
+    "Developer Guides": ["connection_grpc"]
   },
-  "tuorials": {
+  "Tuorials": {
     "Tutorials": ["tutorial_helloworld", "tutorial_robot"]
   }
 }

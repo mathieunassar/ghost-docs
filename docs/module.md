@@ -33,7 +33,7 @@ ghostmodule provides the possibility to integrate second or third-party componen
 
 As parts of the ghost framework, the following extensions are provided:
 
-- *the connection library*: contains a ghost::ModuleExtension that manage connections in a generic form. The library provides server/client and publisher/subscriber interfaces as well as ways to read and write from them. It exposes an entry point (ghost::ConnectionManager) that can be used to configure the underlying communication technology.
+- *the connection library*: contains a ghost::ModuleExtension that manages connections in a generic form. The library provides server/client and publisher/subscriber interfaces as well as ways to read and write from them. It exposes an entry point (ghost::ConnectionManager) that can be used to configure the underlying communication technology.
   - currently, an integration of Google gRPC is implemented in the ghost framework.
 - *the persistence library*: most microservices persist data on the disk or use a database to store their data. The ghost framework provides a library (ghost_persistence) that does just that.
   - currently, the persistence library offers the possibility to store data in a local file (ghost::SaveManager).
