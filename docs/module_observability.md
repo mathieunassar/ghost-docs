@@ -1,6 +1,6 @@
 ---
 id: module_observability
-title: Module Observability
+title: Module: Observability
 
 ---
 

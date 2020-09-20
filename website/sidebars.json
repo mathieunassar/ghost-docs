@@ -4,7 +4,7 @@
     "Library Guides": ["module", "module_observability", "persistence", "connection"],
     "Developer Guides": ["connection_grpc"]
   },
-  "Tuorials": {
+  "Tutorials": {
     "Tutorials": ["tutorial_helloworld", "tutorial_robot"]
   }
 }
