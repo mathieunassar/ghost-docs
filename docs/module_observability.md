@@ -88,4 +88,20 @@ During the configuration of the console, the following parameters can be configu
 
 ### Feature Description
 
-coming soon...
+One possible usage of the console is to interpret user input as command lines and execute them. The default routing of a ghost::Console in a ghost::Module forwards the lines entered by the User to the module's instance of ghost::CommandLineInterpreter. It effectively calls the interpreter's method `execute()` with a line that is provided by the ghost::Console callback mechanism.
+
+Prior to the execution phase, it is possible to configure the interpreter with custom commands by calling the interpreter's method `registerCommand()`. While registering new commands, it is also possible to restrict their access to a specific set of registered users: this feature is introduced in the next section.
+
+A few commands are pre-loaded in the interpreter:
+
+- exit: stops the module, triggering a graceful shutdown of its components (the module switches to the Disposal phase);
+- help: displays a list of available commands including a description string;
+- login: requests a username and a password from the User and attempts to log them into the user manager.
+
+### Usage
+
+Commands are represented by instances of classes realizing the ghost::Command interface, illustrated hereunder. It provides the interpreter with several information which are used to document the commands, as well as the `execute()` method that is called by the interpreter once a matching command is received and parsed.
+
+![Diagram: ghostmodule and Extensions](assets/ghostmodule_command.png)
+
+The shortcut field represents the string that identifies the command and needs to by typed by the user to activate it. The name, description and category strings are used by the "help" command to sort and list the available commands. Finally, the required and optional parameters lists are used to generate a usage string (for documentation purpose). Additionally, those two lists serve as preconditions for the execution of the commands. A missing required parameter prevents the execution of the command.
