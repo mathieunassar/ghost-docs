@@ -76,7 +76,7 @@ During the configuration phase of the microservice, it is possible to set the gh
 
 If this functionality is necessary in a project, the console must be explicitly activated during the configuration phase of the microservice. For this purpose, the ghost::ModuleBuilder provides the `setConsole()` method. This call sets up a ghost::Console object and returns it, so that it can be configured.
 
-Note: at this point, the console is not active: it will be started during the initialization phase of the ghost::Module. Users may however start the console earlier by calling `start()` on the retrieved console object.
+*Note: at this point, the console is not active: it will be started during the initialization phase of the ghost::Module. Users may however start the console earlier by calling `start()` on the retrieved console object.*
 
 During the configuration of the console, the following parameters can be configured:
 
@@ -105,3 +105,31 @@ Commands are represented by instances of classes realizing the ghost::Command in
 ![Diagram: ghostmodule and Extensions](assets/ghostmodule_command.png)
 
 The shortcut field represents the string that identifies the command and needs to by typed by the user to activate it. The name, description and category strings are used by the "help" command to sort and list the available commands. Finally, the required and optional parameters lists are used to generate a usage string (for documentation purpose). Additionally, those two lists serve as preconditions for the execution of the commands. A missing required parameter prevents the execution of the command.
+
+## User Permissions Management
+
+### Feature Description
+
+In some situations it is preferrable to restrict the access of some commands to some priviledged users, such as experienced operators.
+
+##### Users and Groups
+
+The ghost::UserManager component allows microservice developers to create users and groups of users, so-called "permission entities", ghost::PermissionEntity). The user manager can then be used in combination with the command interpreter to set up permissions to the commands. This happens during calls to the interpreter's `registerCommand()` method.
+
+Similarly to a *nix system, users may belong to groups. This affects in particular the command line interpreter: restricting a command to a user group allows every user of this group to execute the command.
+
+##### User Session and Login System
+
+When a user executes a command, the `execute()` method of the ghost::Command is called with an object of type ghost::CommandExecutionContext. The context contains the ghost::Console that triggered the execution (it can be used to read and write lines), and a ghost::Session object that can be used to keep track of the user.
+
+In order to execute user-restricted commands, a user of the microservice must first login into the user manager, with a login and a password that has been predefined by the developers of the application. The `connect()` method of the ghost::UserManager expects a ghost::Session object, which will be associated with the user who just connected. The same session will be re-used for every call made by the same ghost::Console object and can therefore be used as a key to associate data to a specific session.
+
+### Usage
+
+The ghost::UserManager can be first accessed during the initialization phase of the ghost::Module (after it has been built with a ghost::ModuleBuilder). During this phase, users and groups can be added by calling the methods createUser(), createUserGroup() and addUserToGroup().
+
+*Note: A default user is added with username "superuser" and password "superuser".*
+
+Per default, a login command is registered in the command interpreter. This command requests a username and a password from the console and attempts to connect the user to the ghost::UserManager.
+
+*Note: commands can be overridden by registering a new command with the same shortcut (the return value of ghost::Command::getShortcut is identical).*

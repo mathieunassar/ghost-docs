@@ -1,7 +1,7 @@
 {
   "Guides": {
     "Getting Started": ["setup", "installation"],
-    "Library Guides": ["module", "module_observability", "persistence", "connection"],
+    "Library Guides": ["module", "module_observability", "module_threading", "connection", "connection_extensions", "persistence"],
     "Developer Guides": ["connection_grpc"]
   },
   "Tutorials": {
