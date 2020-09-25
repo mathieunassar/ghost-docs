@@ -6,7 +6,7 @@ title: Module: Observability
 
 In this guide, the built-in features of ghostmodule that enable microservice observability are described. The ability to observe the state of a microservice, and possibly interact with it, is an important functionality that can serve multiple purposes such as monitoring, debugging, commissioning or manual operation.
 
-The Ghost framework provides the following components:
+The Ghost framework provides the following components to observe microservices:
 
 - A Logger interface (ghost::Logger);
 - the console utility (ghost::Console);
@@ -126,7 +126,7 @@ In order to execute user-restricted commands, a user of the microservice must fi
 
 ### Usage
 
-The ghost::UserManager can be first accessed during the initialization phase of the ghost::Module (after it has been built with a ghost::ModuleBuilder). During this phase, users and groups can be added by calling the methods createUser(), createUserGroup() and addUserToGroup().
+The ghost::UserManager can be first accessed during the initialization phase of the ghost::Module (after it has been built with a ghost::ModuleBuilder). During this phase, users and groups can be added by calling the methods `createUser()`, `createUserGroup()` and `addUserToGroup()`.
 
 *Note: A default user is added with username "superuser" and password "superuser".*
 

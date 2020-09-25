@@ -6,7 +6,7 @@ title: Module: Microservice Framework
 
 
 
-This document provides a general description of the core library of the ghost C++ microservice framework: ghostmodule.
+This guide provides a general description of the core library of the ghost C++ microservice framework: ghostmodule.
 
 ## Overview
 
