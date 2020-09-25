@@ -55,7 +55,7 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Module: Observability</h1></header><article><div><span><p>In this guide, the built-in features of ghostmodule that enable microservice observability are described. The ability to observe the state of a microservice, and possibly interact with it, is an important functionality that can serve multiple purposes such as monitoring, debugging, commissioning or manual operation.</p>
-<p>The Ghost framework provides the following components:</p>
+<p>The Ghost framework provides the following components to observe microservices:</p>
 <ul>
 <li>A Logger interface (ghost::Logger);</li>
 <li>the console utility (ghost::Console);</li>
@@ -139,7 +139,7 @@
 <p>When a user executes a command, the <code>execute()</code> method of the ghost::Command is called with an object of type ghost::CommandExecutionContext. The context contains the ghost::Console that triggered the execution (it can be used to read and write lines), and a ghost::Session object that can be used to keep track of the user.</p>
 <p>In order to execute user-restricted commands, a user of the microservice must first login into the user manager, with a login and a password that has been predefined by the developers of the application. The <code>connect()</code> method of the ghost::UserManager expects a ghost::Session object, which will be associated with the user who just connected. The same session will be re-used for every call made by the same ghost::Console object and can therefore be used as a key to associate data to a specific session.</p>
 <h3><a class="anchor" aria-hidden="true" id="usage-3"></a><a href="#usage-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h3>
-<p>The ghost::UserManager can be first accessed during the initialization phase of the ghost::Module (after it has been built with a ghost::ModuleBuilder). During this phase, users and groups can be added by calling the methods createUser(), createUserGroup() and addUserToGroup().</p>
+<p>The ghost::UserManager can be first accessed during the initialization phase of the ghost::Module (after it has been built with a ghost::ModuleBuilder). During this phase, users and groups can be added by calling the methods <code>createUser()</code>, <code>createUserGroup()</code> and <code>addUserToGroup()</code>.</p>
 <p><em>Note: A default user is added with username &quot;superuser&quot; and password &quot;superuser&quot;.</em></p>
 <p>Per default, a login command is registered in the command interpreter. This command requests a username and a password from the console and attempts to connect the user to the ghost::UserManager.</p>
 <p><em>Note: commands can be overridden by registering a new command with the same shortcut (the return value of ghost::Command::getShortcut is identical).</em></p>
