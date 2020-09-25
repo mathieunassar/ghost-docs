@@ -8,7 +8,7 @@ title: Module: Microservice Framework
 
 This guide provides a general description of the core library of the ghost C++ microservice framework: ghostmodule.
 
-## Overview
+# Overview
 
 ghostmodule is organized around the central class ghost::Module, whose responsibility is to expose the microservice's components to the rest of the system. An instance of this class can be passed through a user code's implementation and serve as dependency injection mechanism.
 
@@ -16,7 +16,7 @@ The following diagram represents the API interface ghost::Module surrounded by t
 
 ![Diagram: ghostmodule and Extensions](assets/ghostmodule.png)
 
-### Built-in components
+## Built-in components
 
 ghost::Module exposes several components that every microservices generally use:
 
@@ -27,7 +27,7 @@ ghost::Module exposes several components that every microservices generally use:
   - the command line interpreter (ghost::CommandLineInterpreter) can be initialized with user-made commands in order to monitor application specific data;
   - the user manager (ghost::UserManager) manages permissions of observability tasks.
 
-### Module Extensions
+## Module Extensions
 
 ghostmodule provides the possibility to integrate second or third-party components into ghost::Module. Integrated components benefit from the lifetime management functionality (they are started and stopped by the module, and may use a shared or managed thread pool (see ghost::ThreadPool)).
 
@@ -40,13 +40,13 @@ As parts of the ghost framework, the following extensions are provided:
   - Planned: integration of MongoDB databases
 - *Planned: ghost webserver*: as an optional observability mechanism, the ghost framework will provide a webserver in order to visualize the health of the services and their data in a browser.
 
-## Module Lifetime
+# Module Lifetime
 
 The life of a module goes through several stages, which are listed in this section.
 
 ![Diagram: ghostmodule and Extensions](assets/ghostmodule_lifetime.png)
 
-### Phase 1: Configuration
+## Phase 1: Configuration
 
 This phase generally happens in the main function of the executable. An instance of a ghost::ModuleBuilder is created, and is used to add and configure the components of the module. In particular, the methods `setInitializeBehavior()`, `setRunningBehavior()` and `setDisposeBehavior()` exist to set the functions to execute during the respective phases of the module.
 
@@ -54,7 +54,7 @@ Extensions can be added to a module by calling the method `addExtensionBuilder()
 
 At the end of the configuration, the builder's `build()` method is called to generate the module. If the configuration is valid, this method returns an instance of a ghost::Module, which can be finally be started by a simple call to its `start()` method.
 
-### Phase 2: Initialization
+## Phase 2: Initialization
 
 Once start() is called, the module starts initializing. This phase is dedicated to setting up database connections, establishing network connections or any other operations that need to be done before a microservice is considered "running". The order of the initialization of the module is as follows:
 
@@ -67,11 +67,11 @@ If the initialization fails, then the module is stopped. If the initialization f
 
 If the initialization succeeds, then the next phase starts.
 
-### Phase 3: Execution
+## Phase 3: Execution
 
 The next phase is the actual execution of the module. This phase consists in the repeated execution of the function provided at the configuration phase with `setRunningBehavior()`. The provided function must return a Boolean value, which determines whether the execution must continue (true), or if the module can switch to the next phase (false).
 
-### Phase 4: Disposal
+## Phase 4: Disposal
 
 Finally, the module de-initializes and stops. This phase happens if either one of the following conditions is met:
 
