@@ -1,10 +1,10 @@
 {
   "Guides": {
-    "Getting Started": ["setup", "installation"],
+    "Getting Started": ["ghostmodule"],
     "Library Guides": ["module", "module_observability", "module_threading", "connection", "connection_extensions", "persistence"],
     "Developer Guides": ["connection_grpc"]
   },
   "Tutorials": {
-    "Tutorials": ["tutorial_helloworld", "tutorial_robot"]
+    "Tutorials": ["tutorial_setup"]
   }
 }
