@@ -4,11 +4,11 @@ title: Set Up a New Project Using Ghostmodule
 ---
 In this tutorial you will learn to set up a new repository from a template pre-configured to use the Ghost framework.
 
-```
-Difficulty: Beginner
-Time to Read: 30min
-Prerequisites: Overview
-```
+| Difficulty    | Beginner                             |
+| ------------- | ------------------------------------ |
+| Time To Read  | 30 minutes                           |
+| Prerequisites | [Guide: ghostmodule](ghostmodule.md) |
+
 
 ## Summary
 

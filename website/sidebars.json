@@ -5,6 +5,6 @@
     "Developer Guides": ["connection_grpc"]
   },
   "Tutorials": {
-    "Tutorials": ["tutorial_setup"]
+    "Tutorials": ["tutorial_setup, tutorial_robot"]
   }
 }
