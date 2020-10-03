@@ -18,6 +18,8 @@ The created microservice will provide two execution modes:
 - the robot (usage: "connection_grpc_robot robot"), that publishes its pose as a Google Protobuf message of type ghost::examples::protobuf::RobotOdometry;
 - a subscriber version that receives the odometry messages (usage: "connection_grpc_robot").
 
+## Tutorial
+
 ### Step 1: Preparation of the Project
 
 The example program is located in the template repository: https://github.com/mathieunassar/ghostmodule-template.
