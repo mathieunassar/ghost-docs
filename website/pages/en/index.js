@@ -64,7 +64,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-          	<a href="https://github.com/mathieunassar/ghostmodule"><img src="/ghost-docs/img/GitHub-Mark-Light-32px.png" style="padding=3px;" /></a>
+          	<a href="https://github.com/mathieunassar/ghostmodule"><img src="/ghost-docs/img/GitHub-Mark-Light-32px.png" style="padding:3px;" /></a>
             <Button href={docUrl('module')}>Guides</Button>
             <Button href={docUrl('tutorial_setup')}>Tutorials</Button>
           </PromoSection>
