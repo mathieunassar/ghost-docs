@@ -1,6 +1,5 @@
 {
   "Guides": {
-    "Getting Started": ["ghostmodule"],
     "Library Guides": ["module", "module_observability", "module_threading", "connection", "connection_extensions", "persistence"],
     "Developer Guides": ["connection_grpc"]
   },
