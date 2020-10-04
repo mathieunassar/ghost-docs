@@ -21,8 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'GhostDocs', // Title for your website.
-  tagline: 'Documentation Website for Ghost Projects',
+  title: 'Ghostmodule', // Title for your website.
+  tagline: 'Lightweight, multiplatform and accessible framework for command line-based programs and C++ microservices.',
   url: 'https://mathieunassar.github.io', // Your website URL
   baseUrl: '/ghost-docs/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
