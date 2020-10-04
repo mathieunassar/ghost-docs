@@ -99,7 +99,7 @@ class Index extends React.Component {
               'Control the different stages of the life of services.',
             image: `${baseUrl}img/undraw_code_review.svg`,
             imageAlign: 'left',
-            title: 'Program lifetime management',
+            title: 'Program Lifetime Management',
           },
         ]}
       </Block>
